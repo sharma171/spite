@@ -17,7 +17,7 @@ const NationalListing = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [1]);
+  }, []);
   console.log(posts)
 
   console.log("posts", posts);

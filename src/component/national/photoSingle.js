@@ -45,8 +45,14 @@ const LatestSingle = () => {
                   </ul>
                   {Object.keys(post).length ? (
                     <div className="detailed">
-                      <h1 className="story-title">{post.title.rendered}</h1>
-                      <h2 className="subhead">{post.acf.subheading}</h2>
+                      <h1
+                      dangerouslySetInnerHTML={{
+                        __html: post.title.rendered,
+                      }} className="story-title"></h1>
+                      <h2
+                      dangerouslySetInnerHTML={{
+                        __html: post.acf.subheading,
+                      }} className="subhead"></h2>
                       <figure className="featured">
                         <img
                           src={post.better_featured_image.source_url}
@@ -54,8 +60,10 @@ const LatestSingle = () => {
                           className="featured-image"
                         />
                       </figure>
-                      <span className="custom-caption">
-                        {post.better_featured_image.caption}
+                      <span
+                      dangerouslySetInnerHTML={{
+                        __html: post.better_featured_image.caption,
+                      }} className="custom-caption">
                       </span>
                       <p
                         dangerouslySetInnerHTML={{

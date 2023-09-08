@@ -14,7 +14,7 @@ const NewsTicker = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [1]);
+  }, []);
   console.log("posts", posts);
   return (
     <>
