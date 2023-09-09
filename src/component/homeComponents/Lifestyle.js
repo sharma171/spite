@@ -33,7 +33,10 @@ const Lifestyle = () => {
                   />
                 </figure>
                 <div className="info">
-                  <h3 className="headlines">{post.title.rendered}</h3>
+                  <h3
+                  dangerouslySetInnerHTML={{
+                    __html: post.title.rendered,
+                  }} className="headlines"></h3>
                 </div>
               </Link>
             </li>

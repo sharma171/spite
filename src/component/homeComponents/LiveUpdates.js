@@ -24,7 +24,10 @@ const LiveUpdates = () => {
           .map((post) => (
             <li key={post.id}>
                 <Link to={`/liveupdates/${post.slug}`}>
-                  <h3 className="headlines">{post.title.rendered}</h3>
+                  <h3
+                  dangerouslySetInnerHTML={{
+                    __html: post.title.rendered,
+                  }} className="headlines"></h3>
                 </Link>
               </li>
           ))
