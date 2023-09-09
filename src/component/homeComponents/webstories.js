@@ -37,7 +37,10 @@ const WebStories = () => {
                       <img src={storyIcon} alt="web-stories" className="icon" />
                     </div>
                     <div className="headlines">
-                      <h3>{post.title.rendered}</h3>
+                      <h3
+                      dangerouslySetInnerHTML={{
+                        __html: post.title.rendered,
+                      }}></h3>
                     </div>
                   </div>
                 </Link>

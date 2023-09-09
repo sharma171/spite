@@ -30,7 +30,10 @@ const NationalNews = () => {
                       alt={post.slug}
                     />
                   </figure>
-                  <h3 className="news-headlines">{post.title.rendered}</h3>
+                  <h3
+                  dangerouslySetInnerHTML={{
+                    __html: post.title.rendered,
+                  }} className="news-headlines"></h3>
                 </Link>
               </li>
           ))

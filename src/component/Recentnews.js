@@ -34,7 +34,10 @@ const RecentNews = () => {
                         alt="{post.id}"
                       />
                     </figure>
-                    <h3 className="feeds-headlines">{post.title.rendered}</h3>
+                    <h3
+                    dangerouslySetInnerHTML={{
+                      __html: post.title.rendered,
+                    }} className="feeds-headlines"></h3>
                   </div>
                 </Link>
               </li>

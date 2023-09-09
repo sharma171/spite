@@ -57,10 +57,14 @@ const PhotoListing = () => {
                                 />
                               </figure>
                               <div className="info">
-                                <h3 className="headlines line-clamp-3">
-                                  {post.title.rendered}
-                                </h3>
-                                <span>{post.date}</span>
+                                <h3
+                                dangerouslySetInnerHTML={{
+                                  __html: post.title.rendered,
+                                }} className="headlines line-clamp-3"></h3>
+                                <span
+                                dangerouslySetInnerHTML={{
+                                  __html: post.date,
+                                }}></span>
                               </div>
                             </Link>
                         </li>

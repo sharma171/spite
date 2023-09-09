@@ -26,7 +26,10 @@ const NewsTicker = () => {
             return (
               <li key={post.id}>
                 <Link to className="tick-link">
-                  <h2>{post.title.rendered}</h2>
+                  <h2
+                  dangerouslySetInnerHTML={{
+                    __html: post.title.rendered,
+                  }}></h2>
                 </Link>
               </li>
             );
