@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./component/header";
 import Home from "./component/home";
 import Footer from "./component/Footer";
+import ScrollToTop from "./ScrollToTop";
 
 import PropDemo from "./component/propDemo";
 import NationalSingle from "./component/national/nationalSingle";
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div className="Overflow-hidden">
       <Router>
+      <ScrollToTop>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -36,6 +38,7 @@ const App = () => {
           <Route path="/world/" element={<WorldListing />} />
         </Routes>
         <Footer />
+        </ScrollToTop>
       </Router>
     </div>
   );
