@@ -24,10 +24,16 @@ const LatestNews = () => {
           .map((post) => (
             <li key={post.id}>
                 <Link to={`/latest/${post.slug}`}>
-                  <h3 className="headlines">{post.title.rendered}</h3>
+                  <h3
+                  dangerouslySetInnerHTML={{
+                    __html: post.title.rendered,
+                  }} className="headlines"></h3>
                   <div className="news-info">
                     <span className="category">WORLD</span>
-                    <span className="date">{post.date}</span>
+                    <span
+                    dangerouslySetInnerHTML={{
+                      __html: post.date,
+                    }} className="date"></span>
                   </div>
                 </Link>
               </li>
