@@ -1410,6 +1410,7 @@ section {
       width: -moz-available;
       height: auto;
       min-height: 257px;
+      max-height: 257px;
       width: -moz-available;
    }
 
