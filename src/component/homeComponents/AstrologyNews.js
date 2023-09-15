@@ -36,7 +36,7 @@ const Astrology = () => {
                   <h3
                   dangerouslySetInnerHTML={{
                     __html: post.title.rendered,
-                  }} className="feeds-headlines"></h3>hello
+                  }} className="feeds-headlines"></h3>
                 </div>
                 
               </Link>
